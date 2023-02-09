@@ -1,4 +1,4 @@
-// Clone relevant infos into arrays
+// Clone relevant infos into arrays.
 const liItems = [...document.querySelectorAll("li.l-productgrid__item")].filter(
   (elem) => !elem.matches(".l-productgrid__item--editorial")
 );
@@ -12,7 +12,7 @@ const itemsPrice = [
   ...document.querySelectorAll(".c-price__value--current"),
 ].map((el) => el.innerHTML);
 
-// Function that loop through every items and console log if the if condition is met
+// Function that loop through every items and console log if the if condition is met.
 function getInfo() {
   for (let i = 0; i < liItems.length; i++) {
     const oneRectShoe = itemsRects[i];

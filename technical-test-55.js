@@ -47,7 +47,7 @@ function handleScroll() {
   // Since it will become a negative value, we multiply by -1 to get positive value.
   let scrollTrack = rect.top * -1;
 
-  // When track point meet break point, log on screen items and set new break point.
+  // When track point meet break point, log on-screen items and set new break point.
   if (scrollTrack >= scrollBreak) {
     getAll();
     scrollBreak += rect.height;

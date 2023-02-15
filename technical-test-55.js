@@ -21,7 +21,7 @@ function getAll() {
       const oneRectShoe = itemsRects[i];
       const oneItemName = itemsName[i].trim();
       const oneItemPrice = itemsPrice[i].trim();
-      if (oneRectShoe.top <= oneRectShoe.height * 1.25) {
+      if (oneRectShoe.top <= window.innerHeight * 0.7) {
         let result = `Name:${oneItemName} Price:${oneItemPrice}`;
         console.log(result);
       } else {
@@ -38,7 +38,7 @@ getAll();
 window.addEventListener("scroll", handleScroll);
 
 // Create first breakpoint where the console log will be executed once.
-let scrollBreak = (window.innerHeight / 4) * -1;
+let scrollBreak = window.innerHeight * 0.7 * -1;
 
 function handleScroll() {
   const firstLiItem = document.querySelector(".l-productgrid__item");
